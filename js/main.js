@@ -2,7 +2,7 @@
 
 // initialize map
 var map = L.map("map", {
-    center: [46.73, -92.107],
+    center: [46.78, -92.107],
     zoom: 11
 });
 
@@ -25,7 +25,8 @@ request.then(function(values){
 	// parse the incoming datasets into JSON format
 	var precincts = JSON.parse(values);
 	console.log('precincts:', precincts);
-
+//Color gradient wont change
+//Lat long won't change to center
 	//create a polygon layer for precincts
 	var precinctsLayer = L.geoJSON(precincts, {
 		    style: function (feature) {
